@@ -132,6 +132,7 @@ nice_view_spi: &arduino_spi {
 
     kscan_matrix: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
 
         diode-direction = "col2row";
 
@@ -149,6 +150,7 @@ nice_view_spi: &arduino_spi {
 
     kscan_direct: kscan_direct {
         compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
         status = "disabled";
 
         input-gpios
@@ -163,6 +165,7 @@ nice_view_spi: &arduino_spi {
     kscan_sp3t_toggle: kscan_sp3t_toggle {
         compatible = "zmk,kscan-gpio-direct";
         toggle-mode;
+        wakeup-source;
 
         input-gpios
         = <&arduino_header 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
